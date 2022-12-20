@@ -1,6 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.DetailFragment"/>
+    tools:context=".view.DetailFragment">
+
+    <TextView
+        android:id="@+id/nutritionFacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Besin Değerleri"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="2dp"
+        android:layout_marginLeft="100dp"
+        android:textColor="#000000">
+    </TextView>
+    <TextView
+        android:id="@+id/amountPerService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Porsiyon Başına"
+        android:textSize="20sp"
+        android:layout_marginLeft="130dp"
+        android:textStyle="bold"
+        android:padding="2dp"
+        android:layout_below="@+id/nutritionFacts"
+        android:textColor="#000000">
+    </TextView>
+    <TextView
+        android:id="@+id/kcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kalori"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:padding="2dp"
+        android:layout_below="@+id/amountPerService"
+        android:textColor="#000000">
+    </TextView>
+    <TextView
+        android:id="@+id/totalFat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Yağ Oranı"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:padding="2dp"
+        android:layout_below="@+id/kcal"
+        android:textColor="#000000">
+    </TextView>
+    <TextView
+        android:id="@+id/"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Yağ Oranı"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:padding="2dp"
+        android:layout_below="@+id/totalFat"
+        android:textColor="#000000">
+    </TextView>
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="70dp">
+
+        <TextView
+            android:id="@+id/kcalNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:text="Int1"
+            android:textColor="#000000"
+            android:textSize="24sp"></TextView>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="110dp">
+        <TextView
+            android:id="@+id/totalFatNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:text="Int2"
+            android:textColor="#000000"
+            android:textSize="24sp"></TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="150dp">
+        <TextView
+            android:id="@+id/saturatedFatNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="2dp"
+            android:text="Int3"
+            android:textColor="#000000"
+            android:textSize="24sp"></TextView>
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
