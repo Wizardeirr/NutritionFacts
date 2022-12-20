@@ -51,19 +51,129 @@
         android:textColor="#000000">
     </TextView>
     <TextView
-        android:id="@+id/"
+        android:id="@+id/saturatedFat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total Yağ Oranı"
+        android:text="Doymuş Yağ Oranı"
         android:textSize="22sp"
-        android:textStyle="bold"
         android:padding="2dp"
         android:layout_below="@+id/totalFat"
         android:textColor="#000000">
     </TextView>
+    <TextView
+        android:id="@+id/cholesterol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kolesterol"
+        android:textSize="22sp"
+        android:padding="2dp"
+        android:layout_below="@+id/saturatedFat"
+        android:textColor="#000000">
+    </TextView>
+    <TextView
+        android:id="@+id/sodium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trans Yağ"
+        android:textSize="22sp"
+        android:padding="2dp"
+        android:layout_below="@+id/cholesterol"
+        android:textColor="#000000">
+    </TextView>
+    <TextView
+        android:id="@+id/totalCarbonhydrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Karbonhidrat"
+        android:textSize="22sp"
+        android:padding="2dp"
+        android:layout_below="@+id/sodium"
+        android:textColor="#000000">
+    </TextView>
+    <TextView
+        android:id="@+id/dietaryFiber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lif Miktarı"
+        android:textSize="22sp"
+        android:padding="2dp"
+        android:layout_below="@+id/totalCarbonhydrate"
+        android:textColor="#000000">
+    </TextView>
+    <TextView
+        android:id="@+id/totalSugars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Şeker"
+        android:textSize="22sp"
+        android:padding="2dp"
+        android:layout_below="@+id/dietaryFiber"
+        android:textColor="#000000">
+    </TextView>
+    <TextView
+        android:id="@+id/includes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="İlave Şeker İçerir"
+        android:textSize="22sp"
+        android:padding="2dp"
+        android:layout_below="@+id/totalSugars"
+        android:textColor="#000000">
+    </TextView>
+    <TextView
+        android:id="@+id/protein"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Protein"
+        android:textSize="22sp"
+        android:padding="2dp"
+        android:layout_below="@+id/includes"
+        android:textColor="#000000">
+    </TextView>    <TextView
+    android:id="@+id/vitaminD"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Vitamin D"
+    android:textSize="22sp"
+    android:padding="2dp"
+    android:layout_below="@+id/protein"
+    android:textColor="#000000">
+</TextView>    <TextView
+    android:id="@+id/calcium"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Kalsiyum"
+    android:textSize="22sp"
+    android:padding="2dp"
+    android:layout_below="@+id/vitaminD"
+    android:textColor="#000000">
+</TextView>
+    <TextView
+        android:id="@+id/iron"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Demir"
+        android:textSize="22sp"
+        android:padding="2dp"
+        android:layout_below="@+id/calcium"
+        android:textColor="#000000">
+    </TextView>
+    <TextView
+        android:id="@+id/transFat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Potasyum"
+        android:textSize="22sp"
+        android:padding="2dp"
+        android:layout_below="@+id/iron"
+        android:textColor="#000000">
+    </TextView>
+
+
+
     <LinearLayout
         android:layout_width="60dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_marginLeft="300dp"
         android:layout_marginTop="70dp">
 
@@ -72,16 +182,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:padding="2dp"
+            android:padding="1dp"
             android:text="Int1"
             android:textColor="#000000"
-            android:textSize="24sp"></TextView>
+            android:textSize="24sp">
+
+        </TextView>
 
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="60dp"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_marginLeft="300dp"
         android:layout_marginTop="110dp">
         <TextView
@@ -89,26 +201,204 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:padding="2dp"
+            android:padding="1dp"
             android:text="Int2"
             android:textColor="#000000"
-            android:textSize="24sp"></TextView>
+            android:textSize="24sp">
+
+        </TextView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="60dp"
-        android:layout_height="50dp"
+        android:layout_height="30dp"
         android:layout_marginLeft="300dp"
         android:layout_marginTop="150dp">
         <TextView
             android:id="@+id/saturatedFatNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:padding="2dp"
+            android:layout_marginTop="1dp"
             android:text="Int3"
             android:textColor="#000000"
-            android:textSize="24sp"></TextView>
+            android:textSize="24sp">
+
+        </TextView>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="185dp">
+        <TextView
+            android:id="@+id/cholesterolNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Int3"
+            android:textColor="#000000"
+            android:textSize="24sp">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="220dp">
+        <TextView
+            android:id="@+id/cholesterolNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Int3"
+            android:textColor="#000000"
+            android:textSize="24sp">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="255dp">
+        <TextView
+            android:id="@+id/cholesterolNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Int3"
+            android:textColor="#000000"
+            android:textSize="24sp">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="290dp">
+        <TextView
+            android:id="@+id/cholesterolNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Int3"
+            android:textColor="#000000"
+            android:textSize="24sp">
+
+        </TextView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="325dp">
+        <TextView
+            android:id="@+id/cholesterolNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Int3"
+            android:textColor="#000000"
+            android:textSize="24sp">
+
+        </TextView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="360dp">
+        <TextView
+            android:id="@+id/cholesterolNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Int3"
+            android:textColor="#000000"
+            android:textSize="24sp">
+
+        </TextView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="395dp">
+        <TextView
+            android:id="@+id/cholesterolNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Int3"
+            android:textColor="#000000"
+            android:textSize="24sp">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="425dp">
+        <TextView
+            android:id="@+id/cholesterolNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Int3"
+            android:textColor="#000000"
+            android:textSize="24sp">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="460dp">
+        <TextView
+            android:id="@+id/cholesterolNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Int3"
+            android:textColor="#000000"
+            android:textSize="24sp">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="495dp">
+        <TextView
+            android:id="@+id/cholesterolNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Int3"
+            android:textColor="#000000"
+            android:textSize="24sp">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="525dp">
+        <TextView
+            android:id="@+id/cholesterolNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Int3"
+            android:textColor="#000000"
+            android:textSize="24sp">
+
+        </TextView>
+    </LinearLayout>
+
+
 
 
 

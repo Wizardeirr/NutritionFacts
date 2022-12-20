@@ -5,18 +5,35 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.volkankelleci.nutritionfacts.R
+import kotlinx.android.synthetic.main.fragment_main_search.*
 
 class MainSearchFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
+
+
         return inflater.inflate(R.layout.fragment_main_search, container, false)
+
+
     }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        analyzeButton.setOnClickListener {
+            val action=MainSearchFragmentDirections.actionMainSearchFragmentToDetailFragment()
+            findNavController().navigate(action)
+        }
+    }
+
 }
