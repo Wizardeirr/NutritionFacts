@@ -64,9 +64,10 @@
         android:id="@+id/cholesterol"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Kolesterol"
+        android:text="Trans Yağ"
         android:textSize="22sp"
         android:padding="2dp"
+
         android:layout_below="@+id/saturatedFat"
         android:textColor="#000000">
     </TextView>
@@ -74,9 +75,10 @@
         android:id="@+id/sodium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Trans Yağ"
+        android:text="Kolesterol"
         android:textSize="22sp"
         android:padding="2dp"
+        android:textStyle="bold"
         android:layout_below="@+id/cholesterol"
         android:textColor="#000000">
     </TextView>
@@ -84,8 +86,9 @@
         android:id="@+id/totalCarbonhydrate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total Karbonhidrat"
+        android:text="Sodyum"
         android:textSize="22sp"
+        android:textStyle="bold"
         android:padding="2dp"
         android:layout_below="@+id/sodium"
         android:textColor="#000000">
@@ -94,7 +97,8 @@
         android:id="@+id/dietaryFiber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Lif Miktarı"
+        android:text="Total Karbonhidrat"
+        android:textStyle="bold"
         android:textSize="22sp"
         android:padding="2dp"
         android:layout_below="@+id/totalCarbonhydrate"
@@ -104,7 +108,7 @@
         android:id="@+id/totalSugars"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Total Şeker"
+        android:text="Lif Miktarı"
         android:textSize="22sp"
         android:padding="2dp"
         android:layout_below="@+id/dietaryFiber"
@@ -114,7 +118,7 @@
         android:id="@+id/includes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="İlave Şeker İçerir"
+        android:text="Total Şeker"
         android:textSize="22sp"
         android:padding="2dp"
         android:layout_below="@+id/totalSugars"
@@ -124,7 +128,7 @@
         android:id="@+id/protein"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Protein"
+        android:text="İlave Şeker İçerir"
         android:textSize="22sp"
         android:padding="2dp"
         android:layout_below="@+id/includes"
@@ -133,7 +137,8 @@
     android:id="@+id/vitaminD"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Vitamin D"
+    android:text="Protein"
+    android:textStyle="bold"
     android:textSize="22sp"
     android:padding="2dp"
     android:layout_below="@+id/protein"
@@ -142,7 +147,7 @@
     android:id="@+id/calcium"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:text="Kalsiyum"
+    android:text="Vitamin"
     android:textSize="22sp"
     android:padding="2dp"
     android:layout_below="@+id/vitaminD"
@@ -152,12 +157,23 @@
         android:id="@+id/iron"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Demir"
+        android:text="Kalsiyum"
         android:textSize="22sp"
         android:padding="2dp"
         android:layout_below="@+id/calcium"
         android:textColor="#000000">
     </TextView>
+    <TextView
+        android:id="@+id/iron1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Demir"
+        android:textSize="22sp"
+        android:padding="2dp"
+        android:layout_below="@+id/iron"
+        android:textColor="#000000">
+    </TextView>
+
     <TextView
         android:id="@+id/transFat"
         android:layout_width="wrap_content"
@@ -165,10 +181,9 @@
         android:text="Potasyum"
         android:textSize="22sp"
         android:padding="2dp"
-        android:layout_below="@+id/iron"
+        android:layout_below="@+id/iron1"
         android:textColor="#000000">
     </TextView>
-
 
 
     <LinearLayout
@@ -230,10 +245,10 @@
         android:layout_marginLeft="300dp"
         android:layout_marginTop="185dp">
         <TextView
-            android:id="@+id/cholesterolNumber"
+            android:id="@+id/transFatNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Int3"
+            android:text="Int4"
             android:textColor="#000000"
             android:textSize="24sp">
 
@@ -248,7 +263,7 @@
             android:id="@+id/cholesterolNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Int3"
+            android:text="Int5"
             android:textColor="#000000"
             android:textSize="24sp">
 
@@ -260,10 +275,10 @@
         android:layout_marginLeft="300dp"
         android:layout_marginTop="255dp">
         <TextView
-            android:id="@+id/cholesterolNumber"
+            android:id="@+id/sodiumNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Int3"
+            android:text="Int6"
             android:textColor="#000000"
             android:textSize="24sp">
 
@@ -275,10 +290,10 @@
         android:layout_marginLeft="300dp"
         android:layout_marginTop="290dp">
         <TextView
-            android:id="@+id/cholesterolNumber"
+            android:id="@+id/totalCarbonhydrateNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Int3"
+            android:text="Int7"
             android:textColor="#000000"
             android:textSize="24sp">
 
@@ -292,10 +307,10 @@
         android:layout_marginLeft="300dp"
         android:layout_marginTop="325dp">
         <TextView
-            android:id="@+id/cholesterolNumber"
+            android:id="@+id/leafNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Int3"
+            android:text="Int8"
             android:textColor="#000000"
             android:textSize="24sp">
 
@@ -309,10 +324,10 @@
         android:layout_marginLeft="300dp"
         android:layout_marginTop="360dp">
         <TextView
-            android:id="@+id/cholesterolNumber"
+            android:id="@+id/totalSugarsNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Int3"
+            android:text="Int9"
             android:textColor="#000000"
             android:textSize="24sp">
 
@@ -326,10 +341,10 @@
         android:layout_marginLeft="300dp"
         android:layout_marginTop="395dp">
         <TextView
-            android:id="@+id/cholesterolNumber"
+            android:id="@+id/includeSugarNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Int3"
+            android:text="Int10"
             android:textColor="#000000"
             android:textSize="24sp">
 
@@ -342,10 +357,10 @@
         android:layout_marginLeft="300dp"
         android:layout_marginTop="425dp">
         <TextView
-            android:id="@+id/cholesterolNumber"
+            android:id="@+id/proteinNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Int3"
+            android:text="Int11"
             android:textColor="#000000"
             android:textSize="24sp">
 
@@ -357,10 +372,10 @@
         android:layout_marginLeft="300dp"
         android:layout_marginTop="460dp">
         <TextView
-            android:id="@+id/cholesterolNumber"
+            android:id="@+id/vitaminDNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Int3"
+            android:text="Int12"
             android:textColor="#000000"
             android:textSize="24sp">
 
@@ -372,10 +387,10 @@
         android:layout_marginLeft="300dp"
         android:layout_marginTop="495dp">
         <TextView
-            android:id="@+id/cholesterolNumber"
+            android:id="@+id/calciumNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Int3"
+            android:text="Int13"
             android:textColor="#000000"
             android:textSize="24sp">
 
@@ -388,10 +403,25 @@
         android:layout_marginLeft="300dp"
         android:layout_marginTop="525dp">
         <TextView
-            android:id="@+id/cholesterolNumber"
+            android:id="@+id/ironNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Int3"
+            android:text="Int14"
+            android:textColor="#000000"
+            android:textSize="24sp">
+
+        </TextView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="560dp">
+        <TextView
+            android:id="@+id/potaciumNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Int14"
             android:textColor="#000000"
             android:textSize="24sp">
 
