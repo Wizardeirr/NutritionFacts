@@ -18,5 +18,22 @@
         android:id="@+id/detailFragment"
         android:name="com.volkankelleci.nutritionfacts.view.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_kcalFragment"
+            app:destination="@id/kcalFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_totalFatAmountFragment"
+            app:destination="@id/totalFatAmountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kcalFragment"
+        android:name="com.volkankelleci.nutritionfacts.view.kcalFragment"
+        android:label="fragment_kcal"
+        tools:layout="@layout/fragment_kcal" />
+    <fragment
+        android:id="@+id/totalFatAmountFragment"
+        android:name="com.volkankelleci.nutritionfacts.totalFatAmountFragment"
+        android:label="fragment_total_fat_amount"
+        tools:layout="@layout/fragment_total_fat_amount" />
 </navigation>
