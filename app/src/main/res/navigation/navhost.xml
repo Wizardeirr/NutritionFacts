@@ -49,6 +49,18 @@
         <action
             android:id="@+id/action_detailFragment_to_proteinFragment"
             app:destination="@id/proteinFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_vitaminFragment"
+            app:destination="@id/vitaminFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_calciumFragment"
+            app:destination="@id/calciumFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_ironFragment"
+            app:destination="@id/ironFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_potatiumFragment"
+            app:destination="@id/potatiumFragment" />
     </fragment>
     <fragment
         android:id="@+id/kcalFragment"
@@ -100,4 +112,24 @@
         android:name="com.volkankelleci.nutritionfacts.ProteinFragment"
         android:label="fragment_protein"
         tools:layout="@layout/fragment_protein" />
+    <fragment
+        android:id="@+id/vitaminFragment"
+        android:name="com.volkankelleci.nutritionfacts.VitaminFragment"
+        android:label="fragment_vitamin"
+        tools:layout="@layout/fragment_vitamin" />
+    <fragment
+        android:id="@+id/calciumFragment"
+        android:name="com.volkankelleci.nutritionfacts.CalciumFragment"
+        android:label="fragment_calcium"
+        tools:layout="@layout/fragment_calcium" />
+    <fragment
+        android:id="@+id/ironFragment"
+        android:name="com.volkankelleci.nutritionfacts.IronFragment"
+        android:label="fragment_iron"
+        tools:layout="@layout/fragment_iron" />
+    <fragment
+        android:id="@+id/potatiumFragment"
+        android:name="com.volkankelleci.nutritionfacts.PotatiumFragment"
+        android:label="fragment_potatium"
+        tools:layout="@layout/fragment_potatium" />
 </navigation>
