@@ -37,6 +37,12 @@
         <action
             android:id="@+id/action_detailFragment_to_sodiumFragment"
             app:destination="@id/sodiumFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_totalCarbonhydrateFragment"
+            app:destination="@id/totalCarbonhydrateFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_leafAmountFragment"
+            app:destination="@id/leafAmountFragment" />
     </fragment>
     <fragment
         android:id="@+id/kcalFragment"
@@ -68,4 +74,19 @@
         android:name="com.volkankelleci.nutritionfacts.SodiumFragment"
         android:label="fragment_sodium"
         tools:layout="@layout/fragment_sodium" />
+    <fragment
+        android:id="@+id/totalCarbonhydrateFragment"
+        android:name="com.volkankelleci.nutritionfacts.TotalCarbonhydrateFragment"
+        android:label="fragment_total_carbonhydrate"
+        tools:layout="@layout/fragment_total_carbonhydrate" />
+    <fragment
+        android:id="@+id/leafAmountFragment"
+        android:name="com.volkankelleci.nutritionfacts.LeafAmountFragment"
+        android:label="fragment_leaf_amount"
+        tools:layout="@layout/fragment_leaf_amount" />
+    <fragment
+        android:id="@+id/totalSugarFragment"
+        android:name="com.volkankelleci.nutritionfacts.TotalSugarFragment"
+        android:label="fragment_total_sugar"
+        tools:layout="@layout/fragment_total_sugar" />
 </navigation>
