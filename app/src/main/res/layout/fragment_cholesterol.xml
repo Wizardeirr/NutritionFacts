@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CholesterolFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="376dp"
+        android:layout_height="221dp"
+        android:src="@drawable/cholesterol"
+        tools:layout_editor_absoluteX="15dp"
+        tools:layout_editor_absoluteY="16dp">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="141dp"
+        android:layout_height="35dp"
+        android:text="Kolesterol"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="135dp"
+        tools:layout_editor_absoluteY="242dp">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="Kolesterol, vücudunuzdaki tüm hücrelerde bulunan mumsu, yağ benzeri bir maddedir. Vücudunuzun hormonları, D vitaminini ve gıdaları sindirmenize yardımcı olan maddeleri yapmak için bir miktar kolesterole ihtiyacı vardır. Vücudunuz ihtiyaç duyduğu tüm kolesterolü yapar. Kolesterol yumurta sarısı, et ve peynir gibi hayvansal kaynaklı gıdalarda da bulunur. Kanınızda çok fazla kolesterol varsa, kandaki diğer maddelerle birleşerek plak oluşturabilir. Plak, arterlerinizin duvarlarına yapışır. Bu plak oluşumu ateroskleroz olarak bilinir. Koroner arterlerinizin daraldığı ve hatta tıkandığı koroner arter hastalığına yol açabilir."
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="289dp">
+
+    </TextView>
+</androidx.constraintlayout.widget.ConstraintLayout>

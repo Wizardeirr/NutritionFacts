@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
-        android:text="Total Yağ Miktarı"
+        android:text="Total Yağ"
         android:textColor="@color/black"
         android:textSize="30sp"
 

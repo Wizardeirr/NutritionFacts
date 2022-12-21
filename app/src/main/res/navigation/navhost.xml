@@ -31,6 +31,12 @@
         <action
             android:id="@+id/action_detailFragment_to_transFatFragment"
             app:destination="@id/transFatFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_cholesterolFragment"
+            app:destination="@id/cholesterolFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_sodiumFragment"
+            app:destination="@id/sodiumFragment" />
     </fragment>
     <fragment
         android:id="@+id/kcalFragment"
@@ -52,4 +58,14 @@
         android:name="com.volkankelleci.nutritionfacts.transFatFragment"
         android:label="fragment_trans_fat"
         tools:layout="@layout/fragment_trans_fat" />
+    <fragment
+        android:id="@+id/cholesterolFragment"
+        android:name="com.volkankelleci.nutritionfacts.CholesterolFragment"
+        android:label="fragment_cholesterol"
+        tools:layout="@layout/fragment_cholesterol" />
+    <fragment
+        android:id="@+id/sodiumFragment"
+        android:name="com.volkankelleci.nutritionfacts.SodiumFragment"
+        android:label="fragment_sodium"
+        tools:layout="@layout/fragment_sodium" />
 </navigation>
