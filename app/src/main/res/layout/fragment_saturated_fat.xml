@@ -4,48 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.kcalFragment">
+    tools:context=".saturatedFatFragment">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="367dp"
-        android:layout_height="256dp"
+        android:id="@+id/imageView3"
+        android:layout_width="398dp"
+        android:layout_height="242dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        android:src="@drawable/rice"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="23dp"
+        android:src="@drawable/saturatedfat"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="11dp"
-        android:text="kCal"
+        android:layout_marginBottom="19dp"
+        android:text="Doymuş Yağ"
         android:textColor="@color/black"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="61dp"
         android:gravity="center"
+        android:padding="5dp"
+        android:text="Doymuş yağlar genellikle 'kötü yağ' olarak adlandırılır çünkü bunlar kolesterolü yükseltir ve kişinin kalp hastalığı geliştirme riskini artırır.Doymuş yağlar, çocukların her gün yedikleri kalorilerin %10'undan daha azını oluşturmalıdır. Trans yağ mümkün olduğunca düşük olmalıdır (toplam kalorinin %1'inden az)"
         android:textColor="@color/black"
-        android:text=" Kcal ifadesi 1000 Kalori demektir. (1 Kcal = 1000 cal) Besinlerin insan vücuduna kazandırmakta olduğu enerji miktarı da kalori ile ölçülmektedir. Vücuda kazandırılan bu enerji yiyeceklerin yakılması sonucunda açığa çıkmaktadır."
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+    </TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

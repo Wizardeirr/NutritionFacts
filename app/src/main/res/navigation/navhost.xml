@@ -25,6 +25,12 @@
         <action
             android:id="@+id/action_detailFragment_to_totalFatAmountFragment"
             app:destination="@id/totalFatAmountFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_saturatedFatFragment2"
+            app:destination="@id/saturatedFatFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_transFatFragment"
+            app:destination="@id/transFatFragment" />
     </fragment>
     <fragment
         android:id="@+id/kcalFragment"
@@ -36,4 +42,14 @@
         android:name="com.volkankelleci.nutritionfacts.totalFatAmountFragment"
         android:label="fragment_total_fat_amount"
         tools:layout="@layout/fragment_total_fat_amount" />
+    <fragment
+        android:id="@+id/saturatedFatFragment"
+        android:name="com.volkankelleci.nutritionfacts.saturatedFatFragment"
+        android:label="fragment_saturated_fat"
+        tools:layout="@layout/fragment_saturated_fat" />
+    <fragment
+        android:id="@+id/transFatFragment"
+        android:name="com.volkankelleci.nutritionfacts.transFatFragment"
+        android:label="fragment_trans_fat"
+        tools:layout="@layout/fragment_trans_fat" />
 </navigation>
