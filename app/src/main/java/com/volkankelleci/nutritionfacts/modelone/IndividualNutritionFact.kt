@@ -1,10 +1,5 @@
 package com.volkankelleci.nutritionfacts.modelone
 
-import androidx.room.Entity
-import androidx.room.PrimaryKey
-import javax.inject.Inject
-
-@Entity(tableName = "nutritiontable")
 
 data class IndividualNutritionFact(
     val calories: Int,
@@ -17,8 +12,4 @@ data class IndividualNutritionFact(
     val totalNutrientsKCal: TotalNutrientsKCal,
     val totalWeight: Double,
     val uri: String
-
-){
-    @PrimaryKey(autoGenerate = true)
-    val uuid:Int=0
-}
+    )
