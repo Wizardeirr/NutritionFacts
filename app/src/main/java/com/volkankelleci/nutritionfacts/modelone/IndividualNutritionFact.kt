@@ -1,7 +1,10 @@
 package com.volkankelleci.nutritionfacts.modelone
 
+import javax.inject.Inject
+
 
 data class IndividualNutritionFact(
+    @Inject
     val calories: Int,
     val cautions: List<Any>,
     val dietLabels: List<Any>,
