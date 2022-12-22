@@ -1,4 +1,4 @@
-package com.volkankelleci.nutritionfacts
+package com.volkankelleci.nutritionfacts.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
