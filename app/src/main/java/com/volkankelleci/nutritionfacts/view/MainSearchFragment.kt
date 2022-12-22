@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.volkankelleci.nutritionfacts.R
 import com.volkankelleci.nutritionfacts.databinding.FragmentMainSearchBinding
 import com.volkankelleci.nutritionfacts.viewmodel.NutritionViewModel
+import kotlinx.android.synthetic.main.fragment_detail.*
 import kotlinx.android.synthetic.main.fragment_main_search.*
 import retrofit2.http.GET
 
@@ -32,46 +33,62 @@ class MainSearchFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
-        viewModel= ViewModelProvider(this)[NutritionViewModel::class.java]
-        viewModel.refreshData()
 
         return inflater.inflate(R.layout.fragment_main_search, container, false)
 
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        viewModel= ViewModelProvider(this)[NutritionViewModel::class.java]
 
-
-        val GET = this.requireActivity()
-            .getSharedPreferences("pref", MODE_PRIVATE)
+        GET = this.requireActivity().getSharedPreferences("pref", MODE_PRIVATE)
         SET = GET.edit()
-        var nutritionInput = GET.getString("cityName", "malatya")
-        nutritionText.setText(nutritionInput)
-        viewModel.refreshData()
+
+        var searchQuery = GET.getString("searchQuery", "")
+        nutritionText.setText(searchQuery)
+        viewModel.refreshData(searchQuery!!)
         subscribeToObserver()
-        val binding=FragmentMainSearchBinding.bind(view)
+
+        val binding= FragmentMainSearchBinding.bind(view)
         mainSearchFragmentBinding=binding
 
-        analyzeButton.setOnClickListener {
-            val action=MainSearchFragmentDirections.actionMainSearchFragmentToDetailFragment()
-            findNavController().navigate(action)
 
-        }
         analyzeButton.setOnClickListener {
-            val cityName = nutritionText.text.toString()
-            SET.putString("cityName", cityName)
+            val nutritionNames = nutritionText.text.toString()
+            SET.putString("cityName", searchQuery)
             SET.apply()
-            viewModel.refreshData()
+            viewModel.refreshData(nutritionNames)
             subscribeToObserver()
         }
     }
     fun subscribeToObserver(){
         viewModel.nutritions.observe(viewLifecycleOwner, Observer {
             it?.let {
-    
+
+            errorText.text=it.calories.toString()
+                protein.text=it.cautions.toString()
 
 
             }
         })
+        viewModel.errorMessage.observe(viewLifecycleOwner, Observer {
+            if(it) {
+                errorText.visibility=View.VISIBLE
+                progressBar.visibility=View.GONE
+
+            }else{
+                errorText.visibility=View.GONE
+            }
+        })
+        viewModel.progressBar.observe(viewLifecycleOwner, Observer {
+            if(it) {
+                errorText.visibility=View.GONE
+                progressBar.visibility=View.VISIBLE
+
+            }else{
+                progressBar.visibility=View.GONE
+            }
+        })
     }
+
 }

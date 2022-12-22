@@ -33,12 +33,7 @@ class DetailFragment : Fragment() {
             val action=DetailFragmentDirections.actionDetailFragmentToKcalFragment()
             findNavController().navigate(action)
         }
-    }
-    fun subscribeToObserver(){
-        viewModel.nutritions.observe(viewLifecycleOwner, Observer {
-            it?.let {
 
-            }
-        })
     }
+
 }
