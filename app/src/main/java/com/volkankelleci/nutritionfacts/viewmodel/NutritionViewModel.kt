@@ -20,13 +20,13 @@ class NutritionViewModel():ViewModel() {
 
     private val nutritionAPIService=Retrofit()
     private val disposable= CompositeDisposable()
-    fun refreshData(searchQuery: String){
-        takesToDataFromInternet(searchQuery)
+    fun refreshData(nutritionName: String){
+        takesToDataFromInternet(nutritionName)
     }
-    private fun takesToDataFromInternet(searchQuery: String){
+    private fun takesToDataFromInternet(nutritionName:String){
 
         disposable.add(
-            nutritionAPIService.getdata(searchQuery)
+            nutritionAPIService.getdata(nutritionName)
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object : DisposableSingleObserver<nutrition>() {

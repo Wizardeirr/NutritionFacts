@@ -9,9 +9,11 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.volkankelleci.nutritionfacts.R
 import com.volkankelleci.nutritionfacts.databinding.FragmentMainSearchBinding
+import com.volkankelleci.nutritionfacts.modeltwo.nutrition
 import com.volkankelleci.nutritionfacts.viewmodel.NutritionViewModel
 import kotlinx.android.synthetic.main.fragment_detail.*
 import kotlinx.android.synthetic.main.fragment_main_search.*
@@ -25,48 +27,42 @@ class MainSearchFragment : Fragment() {
     private lateinit var SET: SharedPreferences.Editor
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-
+        GET = requireActivity().getSharedPreferences("com.volkankelleci.nutritionfacts.view",
+            MODE_PRIVATE)
+            //getSharedPreferences(packageName, MODE_PRIVATE)
+        SET = GET.edit()
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
         // Inflate the layout for this fragment
-
         return inflater.inflate(R.layout.fragment_main_search, container, false)
-
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel= ViewModelProvider(this)[NutritionViewModel::class.java]
 
-        GET = this.requireActivity().getSharedPreferences("pref", MODE_PRIVATE)
-        SET = GET.edit()
 
-        var searchQuery = GET.getString("searchQuery", "")
-        nutritionText.setText(searchQuery)
-        viewModel.refreshData(searchQuery!!)
+        viewModel = ViewModelProviders.of(this).get(NutritionViewModel::class.java)
+        var nutritionInput = GET.getString("cityName", "malatya")
+
+        nutritionText.setText(nutritionInput)
+        viewModel.refreshData(nutritionInput!!)
+
         subscribeToObserver()
-
-        val binding= FragmentMainSearchBinding.bind(view)
-        mainSearchFragmentBinding=binding
-
-
         analyzeButton.setOnClickListener {
             val nutritionNames = nutritionText.text.toString()
-            SET.putString("cityName", searchQuery)
+            SET.putString("cityName", nutritionNames)
             SET.apply()
             viewModel.refreshData(nutritionNames)
             subscribeToObserver()
         }
+
     }
     fun subscribeToObserver(){
         viewModel.nutritions.observe(viewLifecycleOwner, Observer {
             it?.let {
-
-            errorText.text=it.calories.toString()
-                protein.text=it.cautions.toString()
+            textView4.text=it.get(0).calories.toString()
 
 
             }

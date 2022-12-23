@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class Retrofit {
 
-    // BASE URL = https://raw.githubusercontent.com/atilsamancioglu/BTK20-JSONVeriSeti/master/besinler.json
+
     private val BASE_URL="https://api.edamam.com/"
     private val api=retrofit2.
     Retrofit.
@@ -15,8 +15,8 @@ class Retrofit {
     baseUrl(BASE_URL).
     addConverterFactory(GsonConverterFactory.create()).
     addCallAdapterFactory(RxJava2CallAdapterFactory.create()).build().create(NutritionAPI::class.java)
-    fun getdata(searchQuery:String): Single<nutrition> {
-        return api.getNutrition(searchQuery)
+    fun getdata(nutritionName:String): Single<nutrition> {
+        return api.getNutrition(nutritionName)
 
     }
 }
